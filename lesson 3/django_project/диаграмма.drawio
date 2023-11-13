@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2023-11-13T15:06:45.131Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="UB4s4ZuhOcyADE_oem55" version="22.1.0" type="device">
+  <diagram name="Page-1" id="FhVqyLNNMotR_UKM4Bwt">
+    <mxGraphModel dx="830" dy="448" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="197" y="398" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-2" value="chrome" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="250" y="372" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-3" value="/sales/" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="367" y="339" width="107" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-4" value="URL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="396" y="289" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BxB_oSbhjdNwd_H4GFx3-5" target="BxB_oSbhjdNwd_H4GFx3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BxB_oSbhjdNwd_H4GFx3-5" target="BxB_oSbhjdNwd_H4GFx3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-5" value="def sales" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="555" y="334" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-6" value="View" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="576" y="276" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-7" value="Services" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="709" y="222" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-9" value="ORM(SQL)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="713" y="183" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BxB_oSbhjdNwd_H4GFx3-10" value="sales.html" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="508" y="498" width="80" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
