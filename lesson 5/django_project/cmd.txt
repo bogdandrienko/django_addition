@@ -1,0 +1,30 @@
+# cmd
+cd ..
+python -m venv env
+call env/scripts/activate
+pip install django
+
+django-admin startproject django_settings .
+django-admin startapp django_app
+django-admin startapp django_blog
+django-admin startapp django_payment
+
+
+
+python manage.py runserver 0.0.0.0:8000
+# http://127.0.0.1:8000/
+
+# tabnine - ai assistant(tab)
+# black - autoformatter
+
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+
