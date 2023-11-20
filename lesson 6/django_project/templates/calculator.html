@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link href="{% static 'css/fontawesome/css/all.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'css/bootstrap/bootstrap.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'css/my.css' %}" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="custom_body_1">
+
+
+<form action="/calculator/" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<div class="container px-4 py-5" id="featured-3">
+<h2 class="pb-2 border-bottom">Калькулятор расчёта услуг:</h2>
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3 bg-secondary-custom-1">
+
+
+
+
+
+<div class="feature col bg-white col-3 col-md-3 col-lg-3">
+<h4 class="mb-3 lead">Форма собственности</h4>
+<div class="form-check form-check-inline">
+<input id="credit1" name="credit" value="ИП" type="radio" class="form-check-input" checked="" required="">
+<label class="form-check-label" for="credit1">ИП</label>
+</div>
+<div class="form-check form-check-inline">
+<input id="credit2" name="credit" value="ТОО" type="radio" class="form-check-input" required="">
+<label class="form-check-label" for="credit2">ТОО</label>
+</div>
+
+<hr class="my-4">
+
+<h4 class="mb-3 lead">Режим налообложения</h4>
+<div class="form-check form-check-inline">
+<input id="nalog1" name="nalog" value="Упрощённый" type="radio" class="form-check-input" checked="" required="">
+<label class="form-check-label" for="nalog1">Упрощённый</label>
+</div>
+<div class="form-check form-check-inline">
+<input id="nalog2" name="nalog" value="Общий" type="radio" class="form-check-input" required="">
+<label class="form-check-label" for="nalog2">Общий</label>
+</div>
+<div class="form-check form-check-inline">
+<input id="nalog3" name="nalog" value="Розничный" type="radio" class="form-check-input" required="">
+<label class="form-check-label" for="nalog3">Розничный</label>
+</div>
+
+<hr class="my-4">
+
+<h4 class="mb-3 lead">Вид деятельности</h4>
+<div class="form-check form-check-inline">
+<input id="type1" name="type" value="Услуги" type="radio" class="form-check-input" checked="" required="">
+<label class="form-check-label" for="type1">Услуги</label>
+</div>
+<div class="form-check form-check-inline">
+<input id="type2" name="type" value="Торговля" type="radio" class="form-check-input" required="">
+<label class="form-check-label" for="type2">Торговля</label>
+</div>
+</div>
+
+
+<div class="feature col col-5 col-md-5 col-lg-5 p-1">
+
+    <div class="bg-white">
+
+<h4 class="mb-3 lead">Количество сотрудников</h4>
+<div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4">
+        Нет
+    </div>
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4">
+        От 6 до 10
+    </div>
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4 text-end">
+        16+
+    </div>
+</div>
+<input type="range" name="CountPep" class="form-range m-0 p-0" min="0" max="4" value="0" step="1" id="customRange3">
+<div class="row g-4 row-cols-1 row-cols-lg-3 m-0 p-0">
+    <div class="feature col bg-primary col-6 col-md-6 col-lg-6 m-0 p-0 px-1 text-end">
+        от 1 до 5
+    </div>
+    <div class="feature col bg-primary col-6 col-md-6 col-lg-6 m-0 p-0 px-1 text-start">
+        От 11 до 15
+    </div>
+</div>
+
+<hr class="my-4">
+
+<h4 class="mb-3 lead">Количество документов, выписываемых нами</h4>
+<div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4">
+        Нет
+    </div>
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4">
+        От 6 до 10
+    </div>
+    <div class="feature col bg-primary col-4 col-md-4 col-lg-4 text-end">
+        16+
+    </div>
+</div>
+<input type="range" name="CountDoc" class="form-range m-0 p-0" min="0" max="4" value="0" step="1" id="customRange3">
+<div class="row g-4 row-cols-1 row-cols-lg-3 m-0 p-0">
+    <div class="feature col bg-primary col-6 col-md-6 col-lg-6 m-0 p-0 px-1 text-end">
+        от 1 до 5
+    </div>
+    <div class="feature col bg-primary col-6 col-md-6 col-lg-6 m-0 p-0 px-1 text-start">
+        От 11 до 15
+    </div>
+</div>
+
+<hr class="my-4">
+<div class="text-center">
+    <button class="btn btn-lg btn-outline-success" type="submit">Рассчитать</button>
+</div>
+
+</div>
+</div>
+
+
+<div class="feature col col-4 col-md-4 col-lg-4 p-1">
+    <div class="bg-white">
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Стоимость в месяц</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 fw-bold">{{ itog_val }}</p>
+      <p class="small text-muted lead mb-4">3333333333333</p>
+    </div>
+  </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+</form>
+
+
+<script src="{% static 'js/bootstrap/bootstrap.js' %}" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'components/base.html' %}
+{% load static %}
+
+{% block title %}
+Публикация идеи
+{% endblock title %}
+
+{% block main %}
+
+{% if message %}
+    <div class="lead text-success text-center m-2 p-2">{{ message }}</div>
+{% endif %}
+
+<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary text-center">
+    <form action="{% url 'ideas_create' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Публикация идеи:</h2>
+            <div class="card m-1 p-2">
+                <div class="p-2">
+                    <label class="lead" for="title">Наименование предложения:</label>
+                    <input id="title" name="title" type="text" class="form-control" required="" placeholder="...вводите тут...">
+                </div>
+                <div class="p-2">
+                    <label class="lead" for="description">Описание:</label>
+                    <textarea id="description" name="description" class="form-control" required="" placeholder="...вводите тут..." rows="5"></textarea>
+                </div>
+                <div class="p-2">
+                    <label class="lead" for="budget">Бюджет:</label>
+                    <input id="budget" name="budget" type="number" class="form-control" value="0" required="">
+                </div>
+                <div class="p-2">
+                    <label class="lead" for="avatar">Аватарка:</label>
+                    <input id="avatar" name="avatar" type="file" class="form-control" required="" accept="image/bmp,image/jpeg">
+                </div>
+                <div class="p-2">
+                    <label class="lead" for="file">Дополнительно:</label>
+                    <input id="file" name="additional" type="file" class="form-control" accept=".docx, .xlsx">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-lg btn-outline-success" type="submit">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock main %}

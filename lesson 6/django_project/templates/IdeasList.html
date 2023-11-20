@@ -1,0 +1,36 @@
+{% extends 'components/base.html' %}
+{% load static %}
+
+{% block title %}
+Список идей
+{% endblock title %}
+
+{% block main %}
+
+
+
+<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary" style="width: 600px;">
+    <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom">
+      <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-5 fw-semibold">Список идей</span>
+    </a>
+    <div class="list-group list-group-flush border-bottom scrollarea">
+        {% for idea in ideas_list %}
+          <a href="{% url 'ideas_detail' idea.id %}" class="list-group-item list-group-item-action py-3 lh-sm">
+            <div class="card bg-body-secondary m-1 p-1">
+                <a href="{% url 'ideas_delete' idea.id %}" class="fa-solid fa-trash btn btn-danger p-3"></a>
+                <div class="card-header m-0 p-0 lead">{{ idea.title }}</div>
+                <div class="card-body m-0 p-0">
+                    <img class="img-fluid" width="600px" src="{% static idea.avatar.url %}" alt="{{ idea.title }}"/>
+                    {% if idea.additional %}
+                        <a class="btn btn-primary w-100" href="{% static idea.additional.url %}">скачать проект документа</a>
+                    {% endif %}
+                </div>
+                <a href="{% url 'ideas_detail' idea.id %}" class="btn btn-success">детально</a>
+            </div>
+          </a>
+        {% endfor %}
+    </div>
+  </div>
+
+{% endblock main %}

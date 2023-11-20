@@ -1,0 +1,15 @@
+.bg-secondary-custom-1 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(194, 187, 187, 0.7);
+}
+
+.custom_body_1{
+    /*min-height: 100vh;*/
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: cyan;
+    background-image: url("../img/global_background_image2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /*font-family: Zen Kaku Gothic Antique, sans-serif !important;*/
+}
